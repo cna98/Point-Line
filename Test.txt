@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Test {
+
+	
+	public static void main(String[]args)
+	{
+		Line line = new Line();
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter start point : ");
+		
+		line.setStart(input);
+		
+		System.out.println("Enter finish point : ");
+		
+		line.setFinish(input);
+		
+		System.out.println(line);
+		
+	
+	}
+}

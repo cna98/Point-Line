@@ -1,0 +1,63 @@
+
+import java.util.Scanner;
+
+public class Line {
+	
+	Point start = new Point() , finish = new Point();
+	
+	
+	public Line() {
+		
+	}
+
+	public Line(Point start, Point finish) {
+		
+		this.start = start;
+		this.finish = finish;
+	}
+
+	public Point getStart() {
+		return start;
+	}
+
+	public void setStart(Scanner input )
+	{
+		this.start.setX(input.nextInt());
+		this.start.setY(input.nextInt());
+	}
+	
+	public void setFinish(Scanner input)
+	{
+		this.finish.setX(input.nextInt());
+		this.finish.setY(input.nextInt());
+	}
+	
+	public void setStart(Point start) {
+		this.start = start;
+	}
+
+	public Point getFinish() {
+		return finish;
+	}
+
+	public void setFinish(Point finish) {
+		this.finish = finish;
+	}
+
+	public double length()
+	{
+		return start.distance(finish);
+	}
+	
+	
+	
+	@Override
+	public String toString() {
+		String str = "Start point :  x= " +start.getX() + "   y= " + start.getY() +
+				"\n Finish point :  x= " + finish.getX() + "  y= " + finish.getY() + "\n Length is :  " + length();
+		return str;
+	}
+	
+	
+
+}
